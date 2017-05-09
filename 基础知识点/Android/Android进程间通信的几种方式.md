@@ -1,16 +1,18 @@
 定义多进程
 -----
-   Android应用中使用多进程只有一个办法（用NDK的fork来做除外），就是在AndroidManifest.xml中声明组件时，用android:process属性来指定。
+*Android应用中使用多进程只有一个办法（用NDK的fork来做除外），就是在AndroidManifest.xml中声明组件时，用android:process属性来指定。
 不知定process属性，则默认运行在主进程中，主进程名字为包名。
 android:process = package:remote，将运行在package:remote进程中，属于全局进程，其他具有相同shareUID与签名的APP可以跑在这个进程中。
-android:process = :remote ，将运行在默认包名:remote进程中，而且是APP的私有进程，不允许其他APP的组件来访问。
-##多进程引发的问题
+android:process = :remote ，将运行在默认包名:remote进程中，而且是APP的私有进程，不允许其他APP的组件来访问。*
+
+多进程引发的问题
+----
 - 静态成员和单例失效：
 - 每个进程保持各自的静态成员和单例，相互独立。
 - 线程同步机制失效：每个进程有自己的线程锁。
 - SharedPreferences可靠性下降：不支持并发写，会出现脏数据。
 - Application多次创建,不同进程跑在不同虚拟机，每个虚拟机启动会创建自己的Application，自定义Application时生命周期会混乱。
-综上，不同进程拥有各自独立的虚拟机，Application，内存空间，由此引发一系列问题。
+- 综上，不同进程拥有各自独立的虚拟机，Application，内存空间，由此引发一系列问题。
 
 进程间通信
 ------------

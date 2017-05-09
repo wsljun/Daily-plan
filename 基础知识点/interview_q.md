@@ -95,7 +95,7 @@ Java类加载机制，这和Android热修复技术相关
 
 工厂模式
 
-观察者模式，这在Android中比较常用
+观察者模式，这在Android中比较常用 http://blog.csdn.net/lmj623565791/article/details/24179699
 
 迭代器模式
 
@@ -111,21 +111,37 @@ Activity的四种启动方式，这是一面经常问到的
 
 Android的消息机制，理清Handler、Looper、Message和MessageQueue之间的关系即可
 
-Service和IntentService的区别
+Service和IntentService的区别  // http://blog.csdn.net/matrix_xu/article/details/7974393
 
-自定义View的几种方式
+自定义View的几种方式：(组合，自绘，继承) //http://www.cnblogs.com/jiayongji/p/5560806.html
+- 自定义View的步骤： //http://blog.csdn.net/lmj623565791/article/details/24252901/
+1. 自定义View的属性
+2. 在View的构造方法中获得我们自定义的属性
+3. 重写onMesure 
+4. 重写onDraw
 
-Android动画的几种方式
+
+- Android动画的几种方式
+
+    1. View Animation： 视图动画在古老的Android版本系统中就已经提供了，只能被用来设置View的动画。
+
+    2. Drawable Animation： 这种动画（也叫Frame动画、帧动画）其实可以划分到视图动画的类别，专门用来一个一个的显示Drawable的resources，就像放幻灯片一样。
+
+    3. Property Animation： 属性动画只对Android 3.0（API 11）以上版本的Android系统才有效，这种动画可以设置给任何Object，包括那些还没有渲染到屏幕上的对象。这种动画是可扩展的，可以让你自定义任何类型和属性的动画。
+
 
 进程间通信方式
 
-序列化相关知识，怎么序列化，为啥要序列化
+序列化相关知识，怎么序列化，为啥要序列化 //http://www.cnblogs.com/yezhennan/p/5527506.html
 
-触摸事件传递流程
+- 触摸事件传递流程 //http://blog.csdn.net/awangyunke/article/details/22047987
+1. public boolean dispatchTouchEvent(MotionEvent ev)  这个方法用来分发TouchEvent
+2. public boolean onInterceptTouchEvent(MotionEvent ev) 这个方法用来拦截TouchEvent
+3. public boolean onTouchEvent(MotionEvent ev) 这个方法用来处理TouchEvent
 
 如何设计缓存模块
 
-如何做持久化
+如何做持久化 //http://blog.csdn.net/qq_24850089/article/details/51384810
 
 面试Android的话，还是建议做至少两个能拿出手的项目，现在的Android岗位相对来说比较饱和，没有项目经验的话基本没有拿offer的机会。然后要熟练Android的基本知识，掌握重点的进阶知识，其实面试的问题更多的是从你的项目中用到的技术去展开，所以一定要熟悉自己在简历上写的关键技术，并做好技术延伸的准备。
 

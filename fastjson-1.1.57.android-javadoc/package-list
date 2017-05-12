@@ -1,0 +1,6 @@
+com.alibaba.fastjson
+com.alibaba.fastjson.annotation
+com.alibaba.fastjson.parser
+com.alibaba.fastjson.parser.deserializer
+com.alibaba.fastjson.serializer
+com.alibaba.fastjson.util

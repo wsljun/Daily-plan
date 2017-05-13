@@ -123,7 +123,7 @@
 1.5 注解
 
 
-	1. [注解的使用](http://www.yq1012.com/myweb/2230.html) 
+	1. [注解的使用] (http://www.yq1012.com/myweb/2230.html) (http://www.cnblogs.com/pepcod/archive/2013/02/20/2918719.html)
 
 	2. 注解的级别及意义  
 

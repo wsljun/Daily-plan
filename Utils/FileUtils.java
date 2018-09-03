@@ -1,4 +1,4 @@
-package com.my.student_for_androidhd.content.util;
+
 
 import android.content.Context;
 import android.content.res.AssetManager;

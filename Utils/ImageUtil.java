@@ -1,4 +1,4 @@
-package com.my.student_for_androidhd.content.util;
+
 
 import android.app.Activity;
 import android.content.Context;
